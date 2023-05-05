@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1216</width>
+    <height>792</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Aharoni</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>operation guide</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btnLocation">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>730</y>
+      <width>71</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>location</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="Colonoscopy">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>590</width>
+      <height>360</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ColonoScopy</string>
+    </property>
+    <widget class="QLabel" name="Camera">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>561</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="ARnavigation">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>360</y>
+      <width>590</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>AR Navigation</string>
+    </property>
+    <widget class="QVTKWidget" name="qvtkWidget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>570</width>
+       <height>340</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>0</y>
+      <width>590</width>
+      <height>360</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>ModelGuide</string>
+    </property>
+    <widget class="QVTKWidget" name="qvtkWidget_2" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>570</width>
+       <height>340</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>360</y>
+      <width>590</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>vGuide</string>
+    </property>
+    <widget class="QVTKWidget" name="qvtkWidget_3" native="true">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>570</width>
+       <height>340</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnProjectCtrl">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>730</y>
+      <width>80</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>相机模式</string>
+    </property>
+   </widget>
+   <zorder>Colonoscopy</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>ARnavigation</zorder>
+   <zorder>btnLocation</zorder>
+   <zorder>btnProjectCtrl</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1216</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Model"/>
+    <addaction name="actionLoad_vGuide"/>
+   </widget>
+   <widget class="QMenu" name="menuO">
+    <property name="title">
+     <string>Operator</string>
+    </property>
+    <addaction name="actionOpen_Camera"/>
+    <addaction name="actionOpen_NDI"/>
+    <addaction name="actionSampling"/>
+    <addaction name="actionRegistration"/>
+    <addaction name="actionConstruction"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuO"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionOpen_Camera">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Open Camera</string>
+   </property>
+  </action>
+  <action name="actionLoad_Model">
+   <property name="text">
+    <string>Load Model</string>
+   </property>
+  </action>
+  <action name="actionOpen_NDI">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Open NDI</string>
+   </property>
+  </action>
+  <action name="actionLoad_vGuide">
+   <property name="text">
+    <string>Load vGuide</string>
+   </property>
+  </action>
+  <action name="actionSampling">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Sampling</string>
+   </property>
+  </action>
+  <action name="actionRegistration">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Registration</string>
+   </property>
+  </action>
+  <action name="actionConstruction">
+   <property name="text">
+    <string>Construction</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
